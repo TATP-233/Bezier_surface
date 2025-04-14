@@ -205,7 +205,7 @@ int main() {
 #endif
 
     // 创建GLFW窗口
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "贝塞尔曲面", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Bezier Surface", NULL, NULL);
     if (window == NULL) {
         std::cout << "创建GLFW窗口失败" << std::endl;
         glfwTerminate();
