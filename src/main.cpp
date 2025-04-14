@@ -20,7 +20,7 @@ const unsigned int SCR_WIDTH = 1280;
 const unsigned int SCR_HEIGHT = 720;
 
 // 贝塞尔曲面控制
-float tessellationLevel = 2.0f;
+float tessellationLevel = 10.0f;
 bool wireframeMode = false;
 
 // 相机控制变量
@@ -292,7 +292,7 @@ int main() {
             y = heightDist(gen);
             
             controlPoints.push_back(x);
-            controlPoints.push_back(0.0);
+            controlPoints.push_back(y);
             controlPoints.push_back(z);
             
             // 纹理坐标 (u,v) - 精确对应
@@ -381,7 +381,6 @@ int main() {
         glBindVertexArray(VAO);
         glPatchParameteri(GL_PATCH_VERTICES, 25);
         glDrawArrays(GL_PATCHES, 0, 25);
-        
 
         if (wireframeMode) {
             // 渲染控制点
